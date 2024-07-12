@@ -1,11 +1,8 @@
 import discord
 from bot_mantik import gen_pass 
 from bot_mantik import emoji_olusturucu
-# ayricaliklar (intents) değişkeni botun ayrıcalıklarını depolayacak
 intents = discord.Intents.default()
-# Mesajları okuma ayrıcalığını etkinleştirelim
 intents.message_content = True
-# client (istemci) değişkeniyle bir bot oluşturalım ve ayrıcalıkları ona aktaralım
 client = discord.Client(intents=intents)
 
 @client.event
@@ -25,4 +22,4 @@ async def on_message(message):
     if message.content.startswith('$pass'):
         await message.channel.send("genpass[8]")
 
-client.run("BOTUNUZUN TOKEN BURADA OLMALIDIR!")
+client.run("")
